@@ -1,0 +1,30 @@
+replicaCount: 1
+
+image:
+  repository: 227500/init
+  pullPolicy: IfNotPresent
+  tag: "init-0.1"
+
+
+
+service:
+  type: ClusterIP
+  externalPort: 80
+  internalPort: 5000
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths: []
+  tls: []
+
+
+resources: {}
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
