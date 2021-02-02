@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: 227500/init
   pullPolicy: IfNotPresent
-  tag: "init-0.1"
+  tag: "0.2"
 
 
 

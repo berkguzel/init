@@ -1,34 +1,34 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-deployment
+  name: deployment
 spec:
   selector:
     matchLabels:
-      app: flask-example
+      app: go-example
   replicas: 1 
   template:
     metadata:
       labels:
-        app: flask-example
+        app: go-example
     spec:
       containers:
-      - name: flask-example
-        image: 227500/flaskops:v2
+      - name: go-example
+        image: 227500/init:0.2
         ports:
-        - containerPort: 80 
+        - containerPort: 80
 ---
 kind: Service  
 apiVersion: v1
 metadata:
-  name: flask-example
+  name: go-example
 spec:
   selector:
-    app: flask-example
+    app: go-example
   ports:
   - protocol: TCP
     port: 80
     targetPort: 5000
-    nodePort: 31000
+    nodePort: 31500
   type: NodePort
 

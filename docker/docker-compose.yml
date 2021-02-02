@@ -1,7 +1,7 @@
 version: "3.3"
 
 services:
-  flaskapp:
-    build: . 
+  app:
+    image: 227500/init:0.2
     ports:
-      - "5000:5000"
+      - "8080:8080"
