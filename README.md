@@ -1,5 +1,3 @@
-### This repository shows how to write Dockerfile, docker-compose.yml and deployment.yaml files for a Flask project.
-# Clone The Repository
 1. Run `git clone https://github.com/berkguzel/Dockerfile-dockercompose-deployment.git` in your shell.
 ## Docker
 1. Go into the file where Dockerfile is, run the `docker build -t #yourtag` .
